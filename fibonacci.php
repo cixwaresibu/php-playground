@@ -6,10 +6,10 @@
     
 
     echo $a."<br/>".$b ."<br/>";
-    do {
+    while($a+$b<150) {
         $c =$a+$b;
         echo $c."<br/>";
         $a=$b;
         $b=$c;
-    } while($b<150);
+    } ;
 ?>
