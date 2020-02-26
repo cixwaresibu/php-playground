@@ -22,7 +22,7 @@
     {
         echo "$thirdNumber is greatest among three";
     }
-
+//another approach of doing the same thing
     if($firstNumber>$secondNumber && $firstNumber>$thirdNumber)
     {
         echo "$firstNumber is greatest among three";
