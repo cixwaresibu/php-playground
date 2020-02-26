@@ -26,13 +26,13 @@
             'price' => 300.50
         ]
     ];
-    print_r ($books);
+    // print_r ($books);
     
 ?>
 
 <html>
     <head>
-    
+    <title>table injection</title>
     </head>
     <body>
         <table border="1">
@@ -43,14 +43,12 @@
             </tr>
             <?php
                 foreach($books as $book)
-                
-                
                 {
-                    echo "<tr>
-                    <td>$book[name].</td>
-                    <td>$book[author].</td>
-                    <td>$book[price].</td>
-                    </tr>";
+                    echo "<tr>";
+                    echo "<td>$book[name]</td>";
+                    echo "<td>$book[author]</td>";
+                    echo "<td>$book[price]</td>";
+                    echo "</tr>";
                 }
                 
             ?>
