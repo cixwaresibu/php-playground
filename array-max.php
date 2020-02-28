@@ -1,4 +1,6 @@
 <?php
+
+    //finding the maximum number from array without user-defined function
     $arr = [15, 20, 5, 4, 3, 20, 6, 51, 99, 80];
     $count = count($arr);
     $max = $arr[0];
@@ -12,6 +14,8 @@
     echo "<br/>";
     echo "<br/>";
 
+
+    //finding the maximum number from array using a user-defined function
     function arrayMaxNumber($array){
         $total = count($array);
         $maximum = $array[0];

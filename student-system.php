@@ -1,6 +1,7 @@
 <?php
     $marks = [19, 90, 4, 29, 1, 23, 5, 88, 73, 32, 42, 28, 91, 8, 52, 76, 82, 63, 33, 20, 12, 9, 71, 53, 87, 69, 70, 41, 45, 2, 58, 61, 64, 18, 0, 7, 30, 86, 80, 75, 39, 56, 81, 51, 84, 83, 89, 50, 36, 77];
     echo 'marks obtained by the student in annual exam is :'."<br/>";
+    
     print_r($marks);
     echo "<br/>";
    $array1=[];
@@ -14,21 +15,22 @@
    $array9=[];
    $array10=[];
  
-//    $count = count($marks); //sorting the array in ascending order
-//         for ($i = 0; $i < $count; $i++) 
-//         {
-//             for ($j = $i + 1; $j < $count; $j++)
-//             {
-//                 if ($marks[$i] > $marks[$j]) 
-//                 {
-//                     $temp =  $marks[$i];
-//                     $marks[$i] = $marks[$j];
-//                     $marks[$j] = $temp;
-//                 }
-//             }
-//         }
- 
-  for($i=0; $i<count($marks); $i++)
+   //sorting the array in ascending order
+ /*  $count = count($marks); 
+        for ($i = 0; $i < $count; $i++) 
+        {
+            for ($j = $i + 1; $j < $count; $j++)
+            {
+                if ($marks[$i] > $marks[$j]) 
+                {
+                    $temp =  $marks[$i];
+                    $marks[$i] = $marks[$j];
+                    $marks[$j] = $temp;
+                }
+            }
+        }
+ */
+  for($i=0; $i<count($marks); $i++) //grouping the students into different groups ac to the marks
   {
       if($marks[$i]<=9)
       {
@@ -71,6 +73,7 @@
           $array10[]=$marks[$i];
       }
   }
+  //displaying the number of students of different groups
   echo 'total number of students is : '.count($marks)."<br/><br/>";
   echo 'Number of students who score below 9 marks is : '.count($array1)."<br/><br/>";
   echo 'Number of students who score between 10 and 19 marks is : '.count($array2)."<br/><br/>";
@@ -83,33 +86,35 @@
   echo 'Number of students who score between 80 and 89 marks is : '.count($array9)."<br/><br/>";
   echo 'Number of students who score between 90 and 99 marks is : '.count($array10)."<br/><br/>";
   
-  // print_r($array1);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array2);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array3);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array4);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array5);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array6);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array7);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array8);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array9);
-//   echo '<br>';
-//   echo '<br>';
-//   print_r($array10);
-    
+  //printing the marks of different groups
+
+/* print_r($array1);
+  echo '<br>';
+  echo '<br>';
+  print_r($array2);
+  echo '<br>';
+  echo '<br>';
+  print_r($array3);
+  echo '<br>';
+  echo '<br>';
+  print_r($array4);
+  echo '<br>';
+  echo '<br>';
+  print_r($array5);
+  echo '<br>';
+  echo '<br>';
+  print_r($array6);
+  echo '<br>';
+  echo '<br>';
+  print_r($array7);
+  echo '<br>';
+  echo '<br>';
+  print_r($array8);
+  echo '<br>';
+  echo '<br>';
+  print_r($array9);
+  echo '<br>';
+  echo '<br>';
+  print_r($array10);
+    */
  ?>
