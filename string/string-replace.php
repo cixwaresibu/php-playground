@@ -5,7 +5,9 @@
     echo str_replace("student","teacher",$str);
     $str1 = str_replace("student","teacher",$str);
     echo "<br>";
-    echo str_replace("are","were",$str);
+    echo str_replace("are","were",$str,$count);
+    echo "<br>";
+    echo $count;
     echo "<br>";
     echo str_replace("are","were",$str1);
 ?>
