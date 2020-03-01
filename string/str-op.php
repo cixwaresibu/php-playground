@@ -8,4 +8,7 @@
 
     //position of a string
     echo strpos("$str","sibu");
+    echo "<br>";
+    
+
 ?>
