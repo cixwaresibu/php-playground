@@ -1,0 +1,4 @@
+<?php
+    $string = "Lorem, ipsum dolor sit amet  consectetur adipisicing elit. Quae vitae ab reprehenderit, eaque \n libero dolorum suscipit dolore maiores! Commodi numquam \n consequuntur suscipit voluptates deleniti vel unde repudiandae \n architecto blanditiis? Maiores impedit ipsum facere officia \n sequi voluptatum optio laborum placeat aperiam molestias modi \n excepturi recusandae tenetur exercitationem,\n ullam quas harum quaerat illo odit autem. Consequuntur \n accusamus sint numquam et veniam praesentium \n dolore blanditiis libero aliquam saepe? Aliquam, cumque \n inventore repellendus voluptatum pariatur rem \n blanditiis, recusandae dignissimos voluptatibus \ndeleniti laboriosam facilis odio aut sequi \n optio quia! Eius ipsum error, quas fuga \n exercitationem distinctio necessitatibus optio\n aspernatur reprehenderit labore porro quis tenetur beatae.";
+    echo nl2br($string);
+?>
