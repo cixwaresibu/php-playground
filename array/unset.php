@@ -14,4 +14,13 @@
     echo "<br>";
     unset($array[1]);
     print_r($array);
+    echo "<br>";
 ?>
+
+
+<?php
+    $names = array('fname'=>'sibu','lname'=>'dhital','mobile'=>'not-assigned');
+    print_r($names);
+    echo "<br>";
+    unset($names['lname']);
+    print_r($names);
