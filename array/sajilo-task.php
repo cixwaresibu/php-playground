@@ -4,7 +4,7 @@
     $smartCell = array_filter($phone,function($cont){
             return substr($cont,0,2)==96;
     });
-
+    sort($smartCell);
 
     // echo '96 belongs to smart:'.'<br>';
     // echo json_encode($smartCell);
@@ -12,18 +12,21 @@
     $sky = array_filter($phone,function($cont){
         return substr($cont,0,2)==97;
     });
+    sort($sky);
     // echo '97 belongs to sky:'.'<br>';
     // echo json_encode($sky);
     // echo "<br><br>";
     $ncell = array_filter($phone,function($cont){
-        return (substr($cont,0,3)==980);
+        return ((substr($cont,0,3)==980)||(substr($cont,0,3)==981)||(substr($cont,0,3)==982)||(substr($cont,0,3)==983));
     });
+    sort($ncell);
     // echo '980 belongs to ncell:'.'<br>';
     // echo json_encode($ncell);
     // echo "<br><br>";
     $ntc = array_filter($phone,function($cont){
-        return (substr($cont,0,3)==981)||(substr($cont,0,3)==982)||(substr($cont,0,3)==983)||(substr($cont,0,3)==984)||(substr($cont,0,3)==985);
+        return ((substr($cont,0,3)==984)||(substr($cont,0,3)==985)||(substr($cont,0,3)==986));
     });
+    sort($ntc);
     // echo '98x belongs to ntc:'.'<br>';
     // echo json_encode ($ntc);
     ?>
@@ -39,7 +42,7 @@
             <tr>
             <th>96 belongs to smartcell</th>
             <th>97 belongs to sky</th>
-            <th>980 belongs to ncell</th>
+            <th>980,981,982,983 belongs to ncell</th>
             <th>98x belongs to ntc</th>
             </tr>
                 <tr>
@@ -49,7 +52,7 @@
                     <?php 
                     foreach ($smartCell as $phone){
                      echo "<tr>"."<td>";
-                     print_r($phone);
+                     echo $phone;
                      echo "</td>"."</tr>";
                     }
                     ?>
@@ -61,7 +64,7 @@
                 <?php 
                  foreach ($sky as $phone){
                      echo "<tr>"."<td>";
-                     print_r($phone);
+                     echo $phone;
                      echo "</td>"."</tr>";
                  }
                  ?>
@@ -73,7 +76,7 @@
                 <?php 
                  foreach ($ncell as $phone){
                      echo "<tr>"."<td>";
-                     print_r($phone);
+                     echo $phone;
                      echo "</td>"."</tr>";
                  }
                  ?>
@@ -85,7 +88,7 @@
                 <?php 
                  foreach ($ntc as $phone){
                      echo "<tr>"."<td>";
-                     print_r($phone);
+                     echo $phone;
                      echo "</td>"."</tr>";
                  }
                  ?>
