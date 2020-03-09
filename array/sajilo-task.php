@@ -4,24 +4,98 @@
     $smartCell = array_filter($phone,function($cont){
             return substr($cont,0,2)==96;
     });
-    echo '96 belongs to smart:'.'<br>';
-    echo json_encode($smartCell);
-    echo "<br><br>";
+
+
+    // echo '96 belongs to smart:'.'<br>';
+    // echo json_encode($smartCell);
+    // echo "<br><br>";
     $sky = array_filter($phone,function($cont){
         return substr($cont,0,2)==97;
     });
-    echo '97 belongs to sky:'.'<br>';
-    echo json_encode($sky);
-    echo "<br><br>";
+    // echo '97 belongs to sky:'.'<br>';
+    // echo json_encode($sky);
+    // echo "<br><br>";
     $ncell = array_filter($phone,function($cont){
         return (substr($cont,0,3)==980);
     });
-    echo '980 belongs to ncell:'.'<br>';
-    echo json_encode($ncell);
-    echo "<br><br>";
+    // echo '980 belongs to ncell:'.'<br>';
+    // echo json_encode($ncell);
+    // echo "<br><br>";
     $ntc = array_filter($phone,function($cont){
         return (substr($cont,0,3)==981)||(substr($cont,0,3)==982)||(substr($cont,0,3)==983)||(substr($cont,0,3)==984)||(substr($cont,0,3)==985);
     });
-    echo '98x belongs to ntc:'.'<br>';
-    echo json_encode ($ntc);
+    // echo '98x belongs to ntc:'.'<br>';
+    // echo json_encode ($ntc);
     ?>
+
+    <html>
+        <head>
+            <title>
+                phone classification
+            </title>
+        </head>
+        <body>
+            <table border="1" style="margin: 0 auto">
+            <tr>
+            <th>96 belongs to smartcell</th>
+            <th>97 belongs to sky</th>
+            <th>980 belongs to ncell</th>
+            <th>98x belongs to ntc</th>
+            </tr>
+                <tr>
+                    <td valign="top">
+                    <table  style= "margin: 0 auto">
+                    
+                    <?php 
+                    foreach ($smartCell as $phone){
+                     echo "<tr>"."<td>";
+                     print_r($phone);
+                     echo "</td>"."</tr>";
+                    }
+                    ?>
+                    </table>
+                    </td>
+                    <td>
+                    <table style= "margin: 0 auto">
+         
+                <?php 
+                 foreach ($sky as $phone){
+                     echo "<tr>"."<td>";
+                     print_r($phone);
+                     echo "</td>"."</tr>";
+                 }
+                 ?>
+            </table>
+                    </td>
+                    <td valign="top">
+                    <table style= "margin: 0 auto">
+            
+                <?php 
+                 foreach ($ncell as $phone){
+                     echo "<tr>"."<td>";
+                     print_r($phone);
+                     echo "</td>"."</tr>";
+                 }
+                 ?>
+            </table>
+                    </td>
+                    <td valign="top">
+                    <table style= "margin: 0 auto">
+           
+                <?php 
+                 foreach ($ntc as $phone){
+                     echo "<tr>"."<td>";
+                     print_r($phone);
+                     echo "</td>"."</tr>";
+                 }
+                 ?>
+            </table>
+                    </td>
+                </tr>
+            </table>
+            
+            
+            
+            
+        </body>
+    </html>
